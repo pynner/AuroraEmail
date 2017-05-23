@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>Aurora - Patient Care Design @EHealthConference2017</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- Web Font / @font-face : BEGIN -->
 	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
@@ -23,7 +23,8 @@
     <!--[if !mso]><!-->
         <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
     <!--<![endif]-->
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Web Font / @font-face : END -->
 
 	<!-- CSS Reset -->
@@ -31,6 +32,14 @@
 
         /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        a{
+            color: inherit;
+        }
+
+        a:link, a:visited{
+            color:inherit;
+        }
+
         html,
         body {
             margin: 0 auto !important;
@@ -152,11 +161,11 @@
 
 </head>
 <body width="100%" bgcolor="#222222" style="margin: 0; mso-line-height-rule: exactly;">
-    <center style="width: 100%; background: #222222; text-align: left;">
+    <center style="width: 100%; background: #066bc4; text-align: center;">
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
-            (Optional) This text will appear in the inbox preview, but not the email body.
+        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: Source Sans Pro;">
+            Aurora - patient care design
         </div>
         <!-- Visually Hidden Preheader Text : END -->
 
@@ -172,7 +181,7 @@
             <td>
             <![endif]-->
 
-            <!-- Email Header : BEGIN -->
+            <!-- Email Header : BEGIN
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <tr>
                     <td style="padding: 20px 0; text-align: center">
@@ -180,47 +189,45 @@
                     </td>
                 </tr>
             </table>
-            <!-- Email Header : END -->
+            Email Header : END -->
 
             <!-- Email Body : BEGIN -->
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
-
+                <!-- Clear Spacer : BEGIN -->
+                <tr>
+                    <td height="40" style="font-size: 0; line-height: 0 background-color: #000000;">
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Clear Spacer : END -->
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
-                    <td bgcolor="#ffffff">
-                        <img src="http://placehold.it/1200x600" aria-hidden="true" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img">
+                    <td style="background-color=#fffff">
+                        <img src="http://i.imgur.com/xSXvn8S.png" aria-hidden="true" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img">
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
+                <!-- Clear Spacer : BEGIN -->
+                <tr>
+                    <td height="40" style="font-size: 0; line-height: 0 background-color: #000000;">
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Clear Spacer : END -->
 
                 <!-- 1 Column Text + Button : BEGIN -->
                 <tr>
-                    <td bgcolor="#ffffff">
+                    <td bgcolor="#066bc4">
                         <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 24px; line-height: 27px; color: #333333; font-weight: normal;">Praesent laoreet malesuada&nbsp;cursus.</h1>
-                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000;">
+                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 27px; color: #ffffff; font-weight: normal; "><u>Praesent laoreet malesuada&nbsp;cursus.</u></h1>
+                                    <p style="margin: 0; color: #ffffff">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
                                 </td>
                             </tr>
                             <tr>
-                            	<td style="padding: 0 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                    <!-- Button : BEGIN -->
-                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
-                                        <tr>
-                                            <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                                <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-                                                    <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;A Button&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <!-- Button : END -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 21px; color: #333333; font-weight: bold;">Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</h2>
+                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 21px; color: #ffffff; font-weight: bold;">Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</h2>
                                     <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
                                 </td>
                             </tr>
@@ -229,7 +236,7 @@
                 </tr>
                 <!-- 1 Column Text + Button : END -->
 
-                <!-- 2 Even Columns : BEGIN -->
+                <!-- 2 Even Columns : BEGIN
                 <tr>
                     <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 40px">
                         <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
@@ -266,7 +273,7 @@
                         </table>
                     </td>
                 </tr>
-                <!-- Two Even Columns : END -->
+                Two Even Columns : END -->
 
                 <!-- Clear Spacer : BEGIN -->
                 <tr>
@@ -278,12 +285,19 @@
 
                 <!-- 1 Column Text : BEGIN -->
                 <tr>
-                    <td bgcolor="#ffffff">
+                    <td bgcolor="#066bc4">
                         <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
-                                </td>
+                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
+                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 27px; color: #ffffff; font-weight: normal; ">Thanks for visiting us at E-Health Conference 2017!</h1>
+                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 27px; color: #ffffff; font-weight: normal; ">Please support us on our social links :</h1>
+                                    <table border="0" cellpadding = "15">
+                                        <tr>
+                                            <td><a href="https://facebook.com/aurorapcm"><i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a></td>
+                                            <td><a href="https://twitter.com/Aurora_PCM"><i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i></a></td>
+                                            <td><a href="https://www.linkedin.com/company-beta/16254039/"><i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                    </table>
                                 </tr>
                         </table>
                     </td>
@@ -296,12 +310,9 @@
             <!-- Email Footer : BEGIN -->
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
                 <tr>
-                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
-                        <webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">View as a Web Page</webversion>
+                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: 'Source Sans Pro', sans-serif; line-height:18px; text-align: center; color: #ffffff;" class="x-gmail-data-detectors">
+                        Aurora - Patient Care Design<br>Thunder Bay, ON, Canada<br>+1-807-684-6608
                         <br><br>
-                        Company Name<br>123 Fake Street, SpringField, OR, 97477 US<br>(123) 456-7890
-                        <br><br>
-                        <unsubscribe style="color:#888888; text-decoration:underline;">unsubscribe</unsubscribe>
                     </td>
                 </tr>
             </table>
