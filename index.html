@@ -149,16 +149,6 @@
 
     </style>
 
-    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
-    <!--[if gte mso 9]>
-    <xml>
-      <o:OfficeDocumentSettings>
-        <o:AllowPNG/>
-        <o:PixelsPerInch>96</o:PixelsPerInch>
-     </o:OfficeDocumentSettings>
-    </xml>
-    <![endif]-->
-
 </head>
 <body width="100%" bgcolor="#222222" style="margin: 0; mso-line-height-rule: exactly;">
     <center style="width: 100%; background: #066bc4; text-align: center;">
@@ -167,30 +157,8 @@
         <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: Source Sans Pro;">
             Aurora - patient care design
         </div>
-        <!-- Visually Hidden Preheader Text : END -->
 
-        <!--
-            Set the email width. Defined in two places:
-            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
-            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
-        -->
         <div style="max-width: 600px; margin: auto;" class="email-container">
-            <!--[if mso]>
-            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
-            <tr>
-            <td>
-            <![endif]-->
-
-            <!-- Email Header : BEGIN
-            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
-                <tr>
-                    <td style="padding: 20px 0; text-align: center">
-                        <img src="http://placehold.it/200x50" aria-hidden="true" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                    </td>
-                </tr>
-            </table>
-            Email Header : END -->
-
             <!-- Email Body : BEGIN -->
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <!-- Clear Spacer : BEGIN -->
@@ -212,47 +180,20 @@
                 <tr>
                     <td height="40" style="font-size: 0; line-height: 0 background-color: #000000;">
                         &nbsp;
-                        <hr style="color: white"></hr>
+                        <hr style="color: white ; width: 40%;"></hr>
                     </td>
                 </tr>
                 <!-- Clear Spacer : END -->
-
-                <!--2 Even Columns : BEGIN-->
-                <tr>
-                    <td bgcolor="#066bc4" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 40px">
-                        <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
-                            <tr>
-                                <td align="center" valign="top" width="100%">
-                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                        <tr>
-                                            <img src="https://www.aurora-pcm.ca/email/ehealth.png" aria-hidden="true" width="200" height="" alt="ehealthlogo" border="0" align="center" style="height: 150%; width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                        </tr>
-                                        <br><br>
-                                        <tr>
-                                            <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
-                                                <img src="https://www.aurora-pcm.ca/email/LU.png" aria-hidden="true" width="200" height="" alt="lulogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                            </td>
-                                            <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
-                                                <img src="https://www.aurora-pcm.ca/email/NOSM.png" aria-hidden="true" width="200" height="" alt="nosmlogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                            </td>
-                                            <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
-                                                <img src="https://www.aurora-pcm.ca/email/TBRRI.png" aria-hidden="true" width="200" height="" alt="tbrhrilogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        <br><br>
-                        <hr style="color: white"></hr>
-                    </td>
-                </tr>
-                <!--Two Even Columns : END -->
 
                 <!-- 1 Column Text + Button : BEGIN -->
                 <tr>
                     <td bgcolor="#066bc4">
                         <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000;">
+                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 27px; color: #ffffff; font-weight: bolder; ">*Insert Name*, thanks for visiting us at the e-Health Conference 2017</h1>
+                                </td>
+                            </tr>
                             <tr>
                                 <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000;">
                                     <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 27px; color: #ffffff; font-weight: normal; "><u>Praesent laoreet malesuada&nbsp;cursus.</u></h1>
@@ -283,7 +224,6 @@
                         <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 27px; color: #ffffff; font-weight: normal; ">Thanks for visiting us at e-Health Conference 2017!</h1>
                                     <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 27px; color: #ffffff; font-weight: normal; ">Please support us on our social links :</h1>
                                     <table border="0" cellpadding = "15">
                                         <tr>
@@ -297,9 +237,41 @@
                     </td>
                 </tr>
             </table>
+            <!--2 Even Columns : BEGIN-->
+            <table>
+            <tr>
+                <td bgcolor="#066bc4" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 40px">
+                    <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
+                        <tr>
+                            <hr style="color: white; width: 40%;"></hr>
+                            <br>
+                            <td align="center" valign="top" width="100%">
+                                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                    <tr>
+                                        <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
+                                            <img src="https://www.aurora-pcm.ca/email/ehealth.png" aria-hidden="true" width="200" height="" alt="lulogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                        </td>
+                                        <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
+                                            <img src="https://www.aurora-pcm.ca/email/LU.png" aria-hidden="true" width="200" height="" alt="lulogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                        </td>
+                                        <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
+                                            <img src="https://www.aurora-pcm.ca/email/NOSM.png" aria-hidden="true" width="200" height="" alt="nosmlogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                        </td>
+                                        <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
+                                            <img src="https://www.aurora-pcm.ca/email/TBRRI.png" aria-hidden="true" width="200" height="" alt="tbrhrilogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            </table>
+            <!--Two Even Columns : END -->
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
                 <tr>
-                    <hr style="color: white"></hr>
+                    <hr style="color: white; width: 40%;"></hr>
                     <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: 'Source Sans Pro', sans-serif; line-height:18px; text-align: center; color: #ffffff;" class="x-gmail-data-detectors">
                         Aurora - Patient Care Design<br>Thunder Bay, ON, Canada<br>+1-807-684-6608
                         <br><br>
@@ -308,11 +280,6 @@
             </table>
             <!-- Email Footer : END -->
 
-            <!--[if mso]>
-            </td>
-            </tr>
-            </table>
-            <![endif]-->
         </div>
     </center>
 </body>
