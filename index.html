@@ -1,45 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title>Aurora - Patient Care Design @EHealthConference2017</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <title>Aurora - Patient Care Design @eHealthConference2017</title>
 
-    <!-- Web Font / @font-face : BEGIN -->
-	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
-
-    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
-    <!--[if mso]>
-        <style>
-            * {
-                font-family: sans-serif !important;
-            }
-        </style>
-    <![endif]-->
-
-    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
-    <!--[if !mso]><!-->
-        <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
-    <!--<![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Web Font / @font-face : END -->
 
-	<!-- CSS Reset -->
     <style>
-
-        /* What it does: Remove spaces around the email design added by some email clients. */
-        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-        a{
-            color: inherit;
-        }
-
-        a:link, a:visited{
-            color:inherit;
-        }
-
         html,
         body {
             margin: 0 auto !important;
@@ -48,25 +19,57 @@
             width: 100% !important;
         }
 
-        /* What it does: Stops email clients resizing small text. */
-        * {
+        blockquote {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            width: inherit;
+            margin: 5px 0;
+            max-width: 350px;
+            padding: 0px 30px 30px 30px;
+            line-height: 1.45;
+            position: relative;
+            color: #fff;
+        }
+
+        blockquote:before {
+            display: block;
+            margin-top: 5px;
+            padding-left: 10px;
+            content: "\201C";
+            font-size: 80px;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: #fff;
+        }
+
+        blockquote cite {
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            margin-top: 20px;
+        }
+
+        blockquote cite:before {
+            content: "\2014 \2009";
+        }
+
+        {
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
         }
 
-        /* What it does: Centers email on Android 4.4 */
         div[style*="margin: 16px 0"] {
             margin:0 !important;
         }
 
-        /* What it does: Stops Outlook from adding extra spacing to tables. */
         table,
         td {
             mso-table-lspace: 0pt !important;
             mso-table-rspace: 0pt !important;
         }
 
-        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
         table {
             border-spacing: 0 !important;
             border-collapse: collapse !important;
@@ -77,18 +80,19 @@
             table-layout: auto;
         }
 
-        /* What it does: Uses a better rendering method when resizing images in IE. */
         img {
             -ms-interpolation-mode:bicubic;
         }
 
-        /* What it does: A work-around for iOS meddling in triggered links. */
+        a, a:hover, a:active, a:visited{
+            color: #E5E5E5;
+        }
+
         *[x-apple-data-detectors] {
             color: inherit !important;
             text-decoration: none !important;
         }
 
-        /* What it does: A work-around for Gmail meddling in triggered links. */
         .x-gmail-data-detectors,
         .x-gmail-data-detectors *,
         .aBn {
@@ -96,25 +100,25 @@
             cursor: default !important;
         }
 
-        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
         .a6S {
 	        display: none !important;
 	        opacity: 0.01 !important;
         }
-        /* If the above doesn't work, add a .g-img class to any image in question. */
+
         img.g-img + div {
 	        display:none !important;
 	   	}
 
-        /* What it does: Prevents underlining the button text in Windows 10 */
-        .button-link {
-            text-decoration: none !important;
+        hr {
+            border: 0;
+            border-color: white;
+            background: #E5E5E5;
+            display:block;
+            width: 50%;
+            height: 2px;
         }
 
-        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-        /* Create one of these media queries for each additional viewport size you'd like to fix */
-        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
-        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
             .email-container {
                 min-width: 375px !important;
             }
@@ -122,44 +126,26 @@
 
     </style>
 
-    <!-- Progressive Enhancements -->
     <style>
 
-        /* What it does: Hover styles for buttons */
-        .button-td,
-        .button-a {
-            transition: all 100ms ease-in;
-        }
-        .button-td:hover,
-        .button-a:hover {
-            background: #555555 !important;
-            border-color: #555555 !important;
-        }
-
-        /* Media Queries */
         @media screen and (max-width: 600px) {
 
-            /* What it does: Adjust typography on small screens to improve readability */
-			.email-container p {
+            .email-container p {
 				font-size: 17px !important;
 				line-height: 22px !important;
 			}
-
         }
-
     </style>
 
 </head>
 <body width="100%" bgcolor="#222222" style="margin: 0; mso-line-height-rule: exactly;">
     <center style="width: 100%; background: #066bc4; text-align: center;">
-
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: Source Sans Pro;">
-            Aurora - patient care design
+        <div class="preheader" style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: Source Sans Pro;">
+            Aurora - You have received a message
         </div>
 
         <div style="max-width: 600px; margin: auto;" class="email-container">
-            <!-- Email Body : BEGIN -->
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <!-- Clear Spacer : BEGIN -->
                 <tr>
@@ -168,43 +154,35 @@
                     </td>
                 </tr>
                 <!-- Clear Spacer : END -->
-                <!-- Hero Image, Flush : BEGIN -->
+
                 <tr>
                     <td style="background-color: #066bc4">
                         <img src="https://www.aurora-pcm.ca/email/Aurora.png" aria-hidden="true" width="600" height="" alt="AuroraLogo" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img">
                     </td>
                 </tr>
-                <!-- Hero Image, Flush : END -->
 
                 <!-- Clear Spacer : BEGIN -->
                 <tr>
-                    <td height="40" style="font-size: 0; line-height: 0 background-color: #000000;">
+                    <td height="70" style="font-size: 0; line-height: 0 background-color: #000000;">
                         &nbsp;
-                        <hr style="color: white ; width: 40%;"></hr>
+                        <hr/>
                     </td>
                 </tr>
                 <!-- Clear Spacer : END -->
 
-                <!-- 1 Column Text + Button : BEGIN -->
                 <tr>
-                    <td bgcolor="#066bc4">
-                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <td bgcolor="#066bc4" align="left">
+                        <table aria-hidden="false" cellspacing="0" cellpadding="0" border="1" width="75%">
                             <tr>
-                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 27px; color: #ffffff; font-weight: bolder; ">*Insert Name*, thanks for visiting us at the e-Health Conference 2017</h1>
+                                <td bgcolor="#024077" style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000;">
+                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 27px; color: #ffffff; font-weight: bolder; ">Hi <em>$receiverName</em>, <br/><br/>Your PCM : <em>$pcm_id</em> has been reviewed </h1>
+                                    <blockquote style="max-device-width: 200px">
+                                        <br/>
+                                        $comment Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
+                                        <cite>$senderName</cite>
+                                    </blockquote>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #000;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 27px; color: #ffffff; font-weight: normal; "><u>Praesent laoreet malesuada&nbsp;cursus.</u></h1>
-                                    <p style="margin: 0; color: #ffffff">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-                                    <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 21px; color: #ffffff; font-weight: bold;">Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</h2>
-                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
-                                </td>
+
                             </tr>
                         </table>
                     </td>
@@ -212,41 +190,46 @@
 
                 <!-- Clear Spacer : BEGIN -->
                 <tr>
-                    <td height="40" style="font-size: 0; line-height: 0;">
+                    <td height="70" style="font-size: 0; line-height: 0;">
                         &nbsp;
                     </td>
                 </tr>
                 <!-- Clear Spacer : END -->
 
-                <!-- 1 Column Text : BEGIN -->
                 <tr>
                     <td bgcolor="#066bc4">
-                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <table align="center" aria-hidden="false" cellspacing="0" cellpadding="0" border="0" width="85%">
+                            <tr>
+                                <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 27px; color: #ffffff; font-weight: normal; ">Thanks for visiting us at the e-Health Conference 2017.</h1><br><br>
+                                <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 27px; color: #ffffff; font-weight: normal; ">Visit us at <a href="https://www.aurora-pcm.ca">our website</a> for more information</h1>
+                            </tr>
                             <tr>
                                 <td style="padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 27px; color: #ffffff; font-weight: normal; ">Please support us on our social links :</h1>
-                                    <table border="0" cellpadding = "15">
+                                    <h1 style="margin: 0 0 0 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 27px; color: #ffffff; font-weight: normal; ">Follow us on our social links to stay updated with the latest news</h1>
+                                    <br>
+                                    <table border="0" align="center" cellpadding = "30">
                                         <tr>
                                             <td><a href="https://facebook.com/aurorapcm"><img src="https://www.aurora-pcm.ca/email/fbico.png"></img></a></td>
                                             <td><a href="https://twitter.com/Aurora_PCM"><img src="https://www.aurora-pcm.ca/email/twitterico.png"></img></a></td>
                                             <td><a href="https://www.linkedin.com/company-beta/16254039/"><img src="https://www.aurora-pcm.ca/email/linkedinico.png"></img></a></td>
                                         </tr>
                                     </table>
-                                </tr>
+                                </td>
+                            </tr>
                         </table>
                     </td>
                 </tr>
             </table>
-            <!--2 Even Columns : BEGIN-->
+
             <table>
             <tr>
                 <td bgcolor="#066bc4" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 40px">
                     <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
                         <tr>
-                            <hr style="color: white; width: 40%;"></hr>
+                            <hr/>
                             <br>
                             <td align="center" valign="top" width="100%">
-                                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                                     <tr>
                                         <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
                                             <img src="https://www.aurora-pcm.ca/email/ehealth.png" aria-hidden="true" width="200" height="" alt="lulogo" border="0" align="center" style="width: 100%; max-width: 200px; background: #066bc4; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
@@ -268,17 +251,16 @@
                 </td>
             </tr>
             </table>
-            <!--Two Even Columns : END -->
+
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
                 <tr>
-                    <hr style="color: white; width: 40%;"></hr>
-                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: 'Source Sans Pro', sans-serif; line-height:18px; text-align: center; color: #ffffff;" class="x-gmail-data-detectors">
-                        Aurora - Patient Care Design<br>Thunder Bay, ON, Canada<br>+1-807-684-6608
+                    <hr/>
+                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: 'Source Sans Pro', sans-serif; line-height:18px; text-align: center; color: #E5E5E5;" class="x-gmail-data-detectors">
+                        <p>Aurora - Patient Care Design<br>Thunder Bay, ON, Canada<br><a href="tel:8076846698" style="text-decoration:none;border:none;color:#E5E5E5;font-weight:bold;">+1-807-684-6608</a></p>
                         <br><br>
                     </td>
                 </tr>
             </table>
-            <!-- Email Footer : END -->
 
         </div>
     </center>
