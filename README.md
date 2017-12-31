@@ -1,2 +1,2 @@
 # AuroraEmail
-Best email
+A custom html email template
